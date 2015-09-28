@@ -1,0 +1,547 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+hr {
+    max-width: 50px;
+    border-color: #f05f40;
+    border-width: 3px;
+}
+
+hr.light {
+    border-color: #fff;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/barcelona1.gif);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .7);
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 100%;
+    }
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+}
+
+
+/* NAV */
+
+.navbar-default {
+    border-color: rgba(34, 34, 34, .05);
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    color: #f05f40;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #eb3812;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+}
+
+.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:focus:hover {
+    color: #f05f40;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: #f05f40!important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
+    background-color: transparent;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        border-color: rgba(255, 255, 255, .3);
+        background-color: transparent;
+    }
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(255, 255, 255, .7);
+    }
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: rgba(255, 255, 255, .7);
+    }
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {
+        color: #fff;
+    }
+    .navbar-default.affix {
+        border-color: rgba(34, 34, 34, .05);
+        background-color: #fff;
+    }
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #f05f40;
+    }
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #eb3812;
+    }
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: #222;
+    }
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {
+        color: #f05f40;
+    }
+}
+
+
+/*Country navigation*/
+
+#nav-country.affix {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    -webkit-transition: all .6s ease-in-out;
+}
+
+
+/* customize nav style */
+
+.country-nav {
+    z-index: 100;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.country-nav .navbar-nav>li>a {
+    color: #ddd;
+}
+
+.country-nav .dropdown-menu li>a:hover {
+    color: #eee;
+}
+
+.navbar-collapse.in {
+    /*3.0.2 bug workaround*/
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+    outline: 0;
+}
+
+@media (min-width: 767px) {
+    .navbar-nav.nav-justified > li {
+        float: none;
+    }
+}
+
+.country-nav #nav-spain {
+    background: #f39c12;
+}
+
+.country-nav #nav-argentina {
+    background: #2980b9;
+}
+
+.country-nav #nav-pr {
+    background: #8e44ad;
+}
+
+.country-nav #nav-cuba {
+    background: #c0392b;
+}
+
+.country-nav #nav-spain>a:hover {
+    background: #f39c12;
+}
+
+.country-nav #nav-argentina>a:hover {
+    background: #2980b9;
+}
+
+.country-nav #nav-pr>a:hover {
+    background: #8e44ad;
+}
+
+.country-nav #nav-cuba>a:hover {
+    background: #c0392b;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+}
+
+
+/*Colors*/
+
+.bg-spain {
+    /*background-color: #f39c12;
+    border: 25px solid #f39c12;
+    border-top-width: 75px;*/
+}
+
+.bg-argentina {
+    border: 25px solid #2980b9;
+    border-top-width: 75px;
+    /* background-color: #2980b9; */
+}
+
+.bg-pr {
+    /*background-image: url(../img/barcelona2.gif);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: #8e44ad;
+    color: white;*/
+    border: 25px solid #8e44ad;
+    border-top-width: 75px;
+}
+
+.bg-cuba {
+    /*background-color: #c0392b;*/
+    border: 25px solid #c0392b;
+    border-top-width: 75px;
+}
+
+
+/*Country buttons*/
+
+.button-border-primary {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background: none;
+    text-shadow: none;
+    font-size: 2em;
+    padding: .5em;
+}
+
+.button-border-primary-spain {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 5px solid #f39c12;
+    color: #f1c40f;
+}
+
+.button-border-primary-argentina {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 5px solid #2980b9;
+    color: #3498db;
+}
+
+.button-border-primary-pr {
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 5px solid #8e44ad;
+    color: #9b59b6;
+}
+
+.button-border-primary-cuba {
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 5px solid #c0392b;
+    color: #e74c3c;
+}
+
+
+/* line 309, ../scss/partials/_buttons.scss */
+
+.button-border-primary-spain:hover,
+.button-border-primary-spain:focus {
+    background-color: #f1c40f;
+    color: #fff;
+    border: 5px solid #f1c40f;
+}
+
+.button-border-primary-argentina:hover,
+.button-border-primary-argentina:focus {
+    background-color: #3498db;
+    color: #fff;
+    border: 5px solid #3498db;
+}
+
+.button-border-primary-pr:hover,
+.button-border-primary-pr:focus {
+    background-color: #9b59b6;
+    color: #fff;
+    border: 5px solid #9b59b6;
+}
+
+.button-border-primary-cuba:hover,
+.button-border-primary-cuba:focus {
+    background-color: #e74c3c;
+    color: #fff;
+    border: 5px solid #e74c3c;
+}
+
+
+/* line 314, ../scss/partials/_buttons.scss */
+
+.button-border-primary-spain:active,
+.button-border-primary-spain.is-active,
+.button-border-primary-spain.active {
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    background: none;
+    color: #f1c40f;
+    border: 5px solid #f1c40f;
+}
+
+.button-border-primary-argentina:active,
+.button-border-primary.argentina.is-active,
+.button-border-primary-argentina.active {
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    background: none;
+    color: #3498db;
+    border: 5px solid #3498db;
+}
+
+.button-border-primary-pr:active,
+.button-border-primary-pr.is-active,
+.button-border-primary-pr.active {
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    background: none;
+    color: #9b59b6;
+    border: 5px solid #9b59b6;
+}
+
+.button-border-primary-cuba:active,
+.button-border-primary-cuba.is-active,
+.button-border-primary-cuba.active {
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+    background: none;
+    color: #e74c3c;
+    border: 5px solid #e74c3c;
+}
+
+
+/*Sections*/
+
+section {
+    height: 100%;
+}
+
+.section-heading {
+    padding-top: 1.5em;
+}
+
+
+/* Test*/
+
+.remove-all-margin-padding {
+    margin: 0 ! important;
+    padding: 0 ! important;
+}
+
+.floatingHeader {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+
+/* Vertical vertical-tabs */
+
+div.vertical-tab-container {
+    z-index: 3;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    margin-left: 50px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+
+div.vertical-tab-menu {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+div.vertical-tab-menu div.list-group {
+    margin-bottom: 0;
+}
+
+div.vertical-tab-menu div.list-group>a {
+    margin-bottom: 0;
+}
+
+div.vertical-tab-menu div.list-group>a .glyphicon,
+div.vertical-tab-menu div.list-group>a .fa {
+    color: #5A55A3;
+}
+
+div.vertical-tab-menu div.list-group>a:first-child {
+    border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+}
+
+div.vertical-tab-menu div.list-group>a:last-child {
+    border-bottom-right-radius: 0;
+    -moz-border-bottom-right-radius: 0;
+}
+
+div.vertical-tab-menu div.list-group>a.active,
+div.vertical-tab-menu div.list-group>a.active .glyphicon,
+div.vertical-tab-menu div.list-group>a.active .fa {
+    background-color: #5A55A3;
+    background-image: #5A55A3;
+    color: #ffffff;
+}
+
+div.vertical-tab-menu div.list-group>a.active:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-left: 0;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #5A55A3;
+}
+
+div.vertical-tab-content {
+    background-color: #ffffff;
+    /* border: 1px solid #eeeeee; */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+div.vertical-tab div.vertical-tab-content:not(.active) {
+    display: none;
+}
+
+/* Spain city tabs */
+
+.spain-city-tabs li a{
+    height: 100px;
+    padding-top: 50px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#spain-tab-1 {
+    background-color: #FFCB3C;
+}
+#spain-tab-2 {
+    background-color: #83CC61;
+}
+#spain-tab-3 {
+    background-color: #484CB0;
+}
